@@ -1,0 +1,56 @@
+.background {
+  width: 100%;
+  height: 45rem;
+  background-image: url('../photos/image1.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .food__components {
+    width: 80vw;
+    height: 30rem;
+    background: white;
+    border-radius: 5rem;
+    margin: 0 auto;
+    opacity: 50% ;
+
+
+  }
+    .food__components__frame {
+      width: 100%;
+      height: 97%;
+      border-radius: 5rem;
+      border: 0.5rem solid #ab7b7a;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: center;
+      position: relative;
+    }
+    .box {
+      width: 12rem;
+      height: 20vw;
+      text-align: center;
+      border-radius: 2rem;
+      p {
+        font-size: 1.1rem;
+        font-family: "Montserrat";
+        color: #202020;
+        font-weight: lighter;
+
+    }
+    h3 {
+      font-size: 2rem;
+      font-family: "Montserrat";
+      color: #202020;
+      z-index: 3;
+
+
+      }
+    }
+
+
+
