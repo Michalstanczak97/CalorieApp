@@ -9,6 +9,7 @@ import Metabolism from "./components/Metabolism";
 import Chapter from "./components/Chapter";
 import FoodComponents from "./components/FoodComponents";
 import Result from "./components/Result";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <FoodComponents/>
           <Calculator getResult={setResult}/>
           <Result finishResult={result}/>
+          <Footer/>
       </Router>
   );
 }

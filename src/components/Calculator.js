@@ -34,6 +34,7 @@ const Calculator = ({getResult}) => {
                 height_error: true
             }
         });
+        return;
     } if (dataBmr.weight <=0 || dataBmr.weight > 300) {
         setError(prev=> {
             return {
@@ -41,6 +42,7 @@ const Calculator = ({getResult}) => {
                 weight_error:true
             }
         });
+        return;
     } if (dataBmr.age <= 0 || dataBmr.age > 100) {
         setError(prev=> {
             return {
@@ -48,6 +50,7 @@ const Calculator = ({getResult}) => {
                 age_error:true
             }
         })
+            return;
         }
 
 
@@ -55,13 +58,12 @@ const Calculator = ({getResult}) => {
         console.log(error)
         if (error.height_error === false && error.weight_error === false && error.age_error === false) {
             if (dataBmr.sex === "Mężczyzna") {
-                result = 66 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age);
+                result = 66 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age) * dataBmr.exercise;
             } else {
-                result = 123 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age);
+                result = 123 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age) * dataBmr.exercise;
             }
         }
         getResult(result)
-        console.log(error)
     }
 
 
@@ -109,8 +111,8 @@ const Calculator = ({getResult}) => {
             <div className="param">
                 <h2>Ile masz wzrostu i ile ważysz?</h2>
                 <div className="input">
-                <input name="height" value={data.height} onChange={handleChange} type="number" placeholder="wzrost w cm"/>
-                <p>{error.height_error ? "wartość niepoprawna...":""}</p>
+                <input className="input__error" name="height" value={data.height} onChange={handleChange} type="number" placeholder="wzrost w cm"/>
+                <p>{error.height_error ? "input__error":""}</p>
                 <input name="weight" value={data.weight} onChange={handleChange} type="number" placeholder="waga w kg"/>
                 <p>{error.weight_error ? "wartość niepoprawna...": ""}</p>
                 </div>
