@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import '../scss/calculator.scss'
 import {logDOM} from "@testing-library/react";
-
+import history from "./history";
 const Calculator = ({getResult}) => {
     const [error, setError] = useState({
         weight_error: false,
@@ -13,7 +13,7 @@ const Calculator = ({getResult}) => {
         height: "",
         weight: "",
         age: "",
-        exercise: "siedzący",
+        exercise: 1.2,
         sex: ""
     })
     const clear = () => {
@@ -52,20 +52,25 @@ const Calculator = ({getResult}) => {
         })
             return;
         }
-
+        console.log(error.height_error)
 
         let result = 0;
         console.log(error)
         if (error.height_error === false && error.weight_error === false && error.age_error === false) {
             if (dataBmr.sex === "Mężczyzna") {
-                result = 66 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age) * dataBmr.exercise;
+                result = (66 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age)) * dataBmr.exercise;
             } else {
-                result = 123 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age) * dataBmr.exercise;
-            }
+                result = (655 + (9.6 * dataBmr.weight) + (1.8 * dataBmr.height) - (4.7 * dataBmr.age)) * dataBmr.exercise;
+            }    console.log(result)
+
         }
         getResult(result)
-    }
+        showProductTable()
 
+    }
+    const showProductTable = () => {
+        history.push("/productTable")
+    }
 
 
     const handleChange = (e) => {
@@ -102,7 +107,6 @@ const Calculator = ({getResult}) => {
     }
 
 
-
     return (
         <div className="calculator">
             <div className="calculator__container">
@@ -111,16 +115,16 @@ const Calculator = ({getResult}) => {
             <div className="param">
                 <h2>Ile masz wzrostu i ile ważysz?</h2>
                 <div className="input">
-                <input className="input__error" name="height" value={data.height} onChange={handleChange} type="number" placeholder="wzrost w cm"/>
-                <p>{error.height_error ? "input__error":""}</p>
-                <input name="weight" value={data.weight} onChange={handleChange} type="number" placeholder="waga w kg"/>
-                <p>{error.weight_error ? "wartość niepoprawna...": ""}</p>
+                <input className={error.height_error ? "error":""} name="height" value={data.height} onChange={handleChange} type="number" placeholder="wzrost w cm"/>
+                {/*{error.height_error ? {error}:""}*/}
+                <input className={error.weight_error ? "error":""} name="weight" value={data.weight} onChange={handleChange} type="number" placeholder="waga w kg"/>
+                {/*<p>{error.weight_error ? "błąd": ""}</p>*/}
                 </div>
             </div>
             <div className="lifestyle">
                 <h2>Podaj wiek oraz tryb życia</h2>
                 <div className="param2">
-                <input name="age" value={data.age} onChange={handleChange} type="number" placeholder="wiek"/>
+                <input className={error.age_error ? "error":""} name="age" value={data.age} onChange={handleChange} type="number" placeholder="wiek"/>
                 <p>{error.age_error ? "Twój wiek musi być w przedziale od 0 do 100" : ""}</p>
                 <select value={data.exercise} name="exercise" onChange={handleChange} id="activity">
                     <option value={1.2}>siedzący</option>

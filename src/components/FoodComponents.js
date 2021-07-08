@@ -1,5 +1,8 @@
 import React from 'react';
 import '../scss/foodComponents.scss'
+// import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+
 
 
 const FoodComponents = () => {

@@ -3,6 +3,11 @@ import '../scss/result.scss'
 
 const Result = ({finishResult}) => {
 
+        const protein = () => {
+            let sum;
+            sum = Math.floor((finishResult * 0.3) / 4);
+            return sum;
+        }
 
 
     return (
@@ -16,22 +21,23 @@ const Result = ({finishResult}) => {
              <div className="macro__container">
                 <div className="macro">
                 <h1>Białko</h1>
-                <h2>180</h2>
+                <h2>{protein()}</h2>
                 </div>
                 <hr/>
                 <div className="macro">
                     <h1>Węglowodany</h1>
-                    <h2>400</h2>
+                    <h2>44</h2>
                 </div>
                 <hr/>
                 <div className="macro">
                     <h1>Tłuszcz</h1>
-                    <h2>85</h2>
+                    <h2>190</h2>
                 </div>
              </div>
             </div>
         </div>
-    );
+
+);
 }
 
 export default Result;
