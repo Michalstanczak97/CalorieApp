@@ -5,9 +5,19 @@ const Result = ({finishResult}) => {
 
         const protein = () => {
             let sum;
-            sum = Math.floor((finishResult * 0.3) / 4);
+            sum = Math.floor((finishResult * 0.25) / 4);
             return sum;
         }
+    const carbs = () => {
+        let sum;
+        sum = Math.floor((finishResult * 0.5) / 4);
+        return sum;
+    }
+    const fat = () => {
+        let sum;
+        sum = Math.floor((finishResult * 0.25) / 9);
+        return sum;
+    }
 
 
     return (
@@ -26,12 +36,12 @@ const Result = ({finishResult}) => {
                 <hr/>
                 <div className="macro">
                     <h1>Węglowodany</h1>
-                    <h2>44</h2>
+                    <h2>{carbs()}</h2>
                 </div>
                 <hr/>
                 <div className="macro">
                     <h1>Tłuszcz</h1>
-                    <h2>190</h2>
+                    <h2>{fat()}</h2>
                 </div>
              </div>
             </div>

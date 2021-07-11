@@ -26,8 +26,24 @@ const Calculator = ({getResult}) => {
         })
     }
 
-    const handleCount = (dataBmr) => {
-    if (dataBmr.height <= 0 || dataBmr.height > 260) {
+    useEffect(()=>{
+        let result = 0;
+        console.log(error)
+        if (error.height_error === false && error.weight_error === false && error.age_error === false) {
+            if (data.sex === "Mężczyzna") {
+                result = (66 + (13.7 * data.weight) + (5 * data.height) - (6.8 * data.age)) * data.exercise;
+            } else if(data.sex === "Kobieta") {
+                result = (655 + (9.6 * data.weight) + (1.8 * data.height) - (4.7 * data.age)) * data.exercise;
+            }    console.log(result)
+
+        }
+        getResult(Math.floor(result));
+
+    })
+
+
+    const handleCount = () => {
+    if (data.height <= 0 || data.height > 260) {
         setError(prev => {
             return {
                 ...prev,
@@ -35,7 +51,7 @@ const Calculator = ({getResult}) => {
             }
         });
         return;
-    } if (dataBmr.weight <=0 || dataBmr.weight > 300) {
+    } if (data.weight <=0 || data.weight > 300) {
         setError(prev=> {
             return {
                 ...prev,
@@ -43,7 +59,7 @@ const Calculator = ({getResult}) => {
             }
         });
         return;
-    } if (dataBmr.age <= 0 || dataBmr.age > 100) {
+    } if (data.age <= 0 || data.age > 100) {
         setError(prev=> {
             return {
                 ...prev,
@@ -52,26 +68,14 @@ const Calculator = ({getResult}) => {
         })
             return;
         }
-        console.log(error.height_error)
 
-        let result = 0;
-        console.log(error)
-        if (error.height_error === false && error.weight_error === false && error.age_error === false) {
-            if (dataBmr.sex === "Mężczyzna") {
-                result = (66 + (13.7 * dataBmr.weight) + (5 * dataBmr.height) - (6.8 * dataBmr.age)) * dataBmr.exercise;
-            } else {
-                result = (655 + (9.6 * dataBmr.weight) + (1.8 * dataBmr.height) - (4.7 * dataBmr.age)) * dataBmr.exercise;
-            }    console.log(result)
-
-        }
-        getResult(result)
         showProductTable()
 
     }
     const showProductTable = () => {
-        history.push("/productTable")
+            history.push("/productTable")
     }
-
+    // toDO use History - zastosować hook
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -147,7 +151,7 @@ const Calculator = ({getResult}) => {
                 <div className="submit__container">
                 <h2>Oblicz!</h2>
                 <div className="submit">
-                <button className="btn" onClick={() => handleCount(data)}>Oblicz!</button>
+                <button className="btn" onClick={() => handleCount()}>Oblicz!</button>
                 <button className="btn" onClick={clear}>Wyczyść!</button>
                 </div>
             </div>

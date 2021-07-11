@@ -1,0 +1,87 @@
+.product__table {
+  height: 100%;
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  h2 {
+    font-family: "Oswald";
+  }
+}
+.search {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border-radius: 0.5rem;
+    border:0.1rem solid #ab7b7a;
+    height: 2rem;
+    width: 16rem;
+    font-family: Oswald;
+  }
+}
+.your__product_container {
+  width: 80vw;
+  height: 30rem;
+  border-radius: 3rem;
+  border: 0.5rem solid #ab7b7a;
+  background-color: #debfbd;
+  margin: 0 auto;
+  padding-left: 2rem;
+  line-height: 3rem;
+
+}
+.product__list{
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+.product__list ul li{
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.grammage {
+  display: flex;
+  flex-grow: 1;
+  font-family: Oswald;
+}
+.item {
+line-height: 0;
+  h5 {
+    font-family: Oswald;
+    font-size: 0.8rem;
+  }
+}
+.schedule {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  p {
+    margin-right: 0.7rem;
+    font-family: Oswald;
+    font-size: 0.8rem;
+
+  }
+}
+.button__container {
+  display: flex;
+  flex-grow: 4;
+  justify-content: flex-end;
+  width: 1rem;
+  height: 1rem;
+}
+.add__cancel__button {
+  display: flex;
+  width: 95%;
+  justify-content: flex-end;
+}
+  .btn__ {
+    border-radius: 0.5rem;
+    border:0.1rem solid #ab7b7a;
+    height: 2rem;
+    width: 8rem;
+    font-family: Oswald;
+  }
