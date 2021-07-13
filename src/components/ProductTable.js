@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import Result from "./Result";
 import '../scss/productTable.scss'
-import {logDOM} from "@testing-library/react";
 import Product from "./Product";
+import '../scss/myChart.scss'
+import Chapter from "./Chapter";
+import MyChart from "./MyChart";
 
 
 
@@ -25,7 +27,7 @@ const ProductTable = ({finishResult}) => {
                 return total + nextP.calories;
             },0)
             let proteinSum = productsList.reduce((total, nextP) => {
-                return Math.round(total + nextP.protein_g)
+                return (total + nextP.protein_g)
             },0)
             let carbsSum = productsList.reduce((total, nextP) => {
                 return total + nextP.carbohydrates_total_g
@@ -114,6 +116,8 @@ const ProductTable = ({finishResult}) => {
             </div>
         {/*</div>*/}
         </div>
+            <Chapter/>
+            <MyChart totalUsedCalories={summaryMacro.totalCalories} necessaryCalories={finishResult} totalUsedProtein={summaryMacro.totalProtein} necessaryProtein={Math.round((finishResult * 0.25) /4)} totalUsedCarbs={summaryMacro.totalCarbs} necessaryCarbs={Math.round((finishResult * 0.5) /4)} totalUsedFat={summaryMacro.totalFat} necessaryFat={Math.round((finishResult * 0.25) /9)} />
         </>
     );
 }
