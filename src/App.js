@@ -6,12 +6,6 @@ import {Switch, Route} from 'react-router-dom';
 import {Router} from "react-router-dom"
 import history from './components/history'
 import Header from "./components/Header";
-import Banner from "./components/Banner";
-import Calculator from "./components/Calculator";
-import Metabolism from "./components/Metabolism";
-import Chapter from "./components/Chapter";
-import FoodComponents from "./components/FoodComponents";
-import Result from "./components/Result";
 import Footer from "./components/Footer";
 import FirstPage from "./components/FirstPage";
 import ProductTable from "./components/ProductTable";

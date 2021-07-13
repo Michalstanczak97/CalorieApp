@@ -9,7 +9,37 @@ import Product from "./Product";
 const ProductTable = ({finishResult}) => {
     const [query, setQuery] = useState("")
     const [productsList, setProductsList] = useState([])
+    const [summaryMacro, setSummaryMacro] = useState({
+        totalCalories: 0,
+        totalProtein: 0,
+        totalCarbs: 0,
+        totalFat: 0
+    });
 
+
+    useEffect(()=>{
+        if (productsList.length > 0) {
+            let caloriesSum = productsList.reduce((total, nextP) => {
+                console.log(total);
+                console.log(nextP.calories);
+                return total + nextP.calories;
+            },0)
+            let proteinSum = productsList.reduce((total, nextP) => {
+                return Math.round(total + nextP.protein_g)
+            },0)
+            let carbsSum = productsList.reduce((total, nextP) => {
+                return total + nextP.carbohydrates_total_g
+            },0)
+            let fatSum = productsList.reduce((total, totalP) => {
+                return total + totalP.fat_total_g
+            },0)
+            console.log(caloriesSum)
+            setSummaryMacro({...summaryMacro, totalCalories: caloriesSum, totalProtein: proteinSum, totalCarbs: carbsSum, totalFat: fatSum})
+            console.log("productsList w useEffect w compontet productTabla");
+            console.log(productsList);
+        }
+
+    },[productsList])
 
 
     const getApi = () => {
@@ -25,7 +55,6 @@ const ProductTable = ({finishResult}) => {
             .then(data => {
                 if (data.items.length !== 0) {
                 setProductsList(prev => [...prev, data.items[0]])
-                console.log(productsList)
                 }
             })
 
@@ -40,7 +69,13 @@ const ProductTable = ({finishResult}) => {
            setQuery(inputValue);
         }
 
-
+    const clearDataProduct = (id) => {
+        let newArray = productsList.filter((el,key) => key !== id);
+        setProductsList(newArray);
+        console.log("productsList w komponencie productTable po użyciu funcji clearDataProduct");
+        console.log(productsList)
+        console.log(id)
+    }
 
 
 
@@ -53,13 +88,13 @@ const ProductTable = ({finishResult}) => {
         <div className="your__product_container">
             <div className="search">
                 <h1>Policz ile jesz w ciągu dnia</h1>
-                <input onChange={getValue} type="text" placeholder="wpisz swój produkt"/>
+                <input onChange={getValue} onKeyDown={getValue} type="text" placeholder="wpisz swój produkt po angielsku"/>
             </div>
-            <h2>Posiłek 1</h2>
+            <h2>Produkty:</h2>
             <div className="product__list">
                 <ul>
-                    {productsList.map(product => {
-                        return <Product productData={product}/>
+                    {productsList.map((product, key) => {
+                        return <Product setProductsList={setProductsList} clearDataProduct={clearDataProduct} productData={{...product, productId: key}}/>
                         }
                     )}
                 </ul>
@@ -68,12 +103,14 @@ const ProductTable = ({finishResult}) => {
                     <button onClick={getApi} className="btn__">Dodaj Produkt</button>
                     <button className="btn__">Usuń posiłek</button>
                 </div>
+            <div className="summary__table_container">
                 <div className="summary__table">
-                    <div className="sum"/>
-                    <div className="protein__sum"/>
-                    <div className="carbs__sum"/>
-                    <div className="fat__sum"/>
+                    <p className="sum">kcal: {summaryMacro.totalCalories}</p>
+                    <p className="protein__sum">białko: {summaryMacro.totalProtein}</p>
+                    <p className="carbs__sum">węglowodany: {summaryMacro.totalCarbs}</p>
+                    <p className="fat__sum">tłuszcz: {summaryMacro.totalFat}</p>
                 </div>
+            </div>
             </div>
         {/*</div>*/}
         </div>

@@ -22,14 +22,21 @@
 }
 .your__product_container {
   width: 80vw;
-  height: 30rem;
+  min-height: 30rem;
   border-radius: 3rem;
   border: 0.5rem solid #ab7b7a;
   background-color: #debfbd;
   margin: 0 auto;
-  padding-left: 2rem;
-  line-height: 3rem;
+  //padding-left: 2rem;
+  //line-height: 3rem;
+  h1{
+    padding-left: 2rem;
+  }
+  h2{
+    padding-left: 2rem;
+    color: white;
 
+  }
 }
 .product__list{
   width: 100%;
@@ -84,4 +91,28 @@ line-height: 0;
     height: 2rem;
     width: 8rem;
     font-family: Oswald;
+  }
+  .summary__table_container {
+    display: flex;
+    justify-content: center;
+    h3 {
+    }
+  }
+  .summary__table {
+    width: 80%;
+    margin: 0 auto;
+    height: 2rem;
+    border-radius: 0.3rem;
+    border:0.3rem solid #ab7b7a;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    p {
+      font-family: Oswald;
+
+    }
   }
