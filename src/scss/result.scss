@@ -1,3 +1,4 @@
+@import "fonts";
 .result__background {
   width: 100vw;
   margin: 0 auto;
@@ -15,7 +16,7 @@
    width: 80%;
    border-radius: 3rem;
    background-color: white;
-   border: 0.5rem solid #ab7b7a;
+   border: 0.5rem solid $third-color;
  }
  .result {
    display: flex;
@@ -25,12 +26,12 @@
    margin: 0 auto;
    h1 {
      color: #debfbd;
-     font-family: 'Oswald';
+     font-family: $thirdFont;
 
    }
    h2 {
      color: #debfbd;
-     font-family: 'Oswald';
+     font-family: $thirdFont;
    }
  } hr {
   width: 80%;
@@ -53,10 +54,11 @@
       h1 {
         width: 5rem;
         font-size: 2rem;
-        color: #debfbd;
+        color: $secondary-color
+      ;
       }
       h2 {
-        font-family: 'Oswald';
+        font-family: $thirdFont;
         color: #debfbd;
 
       }

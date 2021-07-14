@@ -1,5 +1,7 @@
+@import "fonts";
+
 .banner {
-  background-color: rgba(238,222,222,255);
+  background-color: $secondary-color;
   display: flex;
   align-items: center;
   width: 95vw;
@@ -12,7 +14,7 @@
     margin: 0 auto;
     width: 92vw;
     height: 35rem;
-    border: 0.3em solid white;
+    border: 0.3em solid $primary-color;
     img {
 
     }
@@ -27,20 +29,20 @@
   margin-bottom: 4rem;
 
   p{
-    font-family: "Parisienne";
+    font-family: $elegant-font-2;
     font-size: 2.5rem;
     display: flex;
     justify-content: center;
     color: #202020;
   }
   h1 {
-    font-family: "Cinzel";
+    font-family: $secondaryFont;
     font-size: 3.5rem;
     text-align: center;
 
   }
   span {
-    font-family: "Cinzel";
+    font-family: $secondaryFont;
     font-weight: normal;
     font-size: 1rem;
     text-align: center;

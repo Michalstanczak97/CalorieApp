@@ -103,7 +103,6 @@ const ProductTable = ({finishResult}) => {
                 </div>
                 <div className="add__cancel__button">
                     <button onClick={getApi} className="btn__">Dodaj Produkt</button>
-                    <button className="btn__">Usuń posiłek</button>
                 </div>
             <div className="summary__table_container">
                 <div className="summary__table">

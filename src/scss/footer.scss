@@ -1,3 +1,4 @@
+@import "fonts";
 .footer {
     width: 100vw;
     height: 10rem;
@@ -8,7 +9,7 @@
     h4 {
         color: white;
         opacity: 50%;
-        font-family: 'Oswald';
+        font-family: $thirdFont;
         padding: 0 2rem 0.5rem 0;
     }
 }

@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="banner__frame">
             <img src={women}/>
             <div className="banner__text">
-                <p>Cześć Michał</p>
+                <p>Cześć</p>
                 <h1>ZNAJDUJESZ SIĘ W STREFIE ZDROWIA</h1>
                 <span>
                     Dowiesz się w niej więcej na temat matabolizmu.
