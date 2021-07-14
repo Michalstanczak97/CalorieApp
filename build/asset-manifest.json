@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/CalorieApp/static/css/main.b3033840.chunk.css",
+    "main.js": "/CalorieApp/static/js/main.ef8275e9.chunk.js",
+    "main.js.map": "/CalorieApp/static/js/main.ef8275e9.chunk.js.map",
+    "runtime-main.js": "/CalorieApp/static/js/runtime-main.e5d1f8bf.js",
+    "runtime-main.js.map": "/CalorieApp/static/js/runtime-main.e5d1f8bf.js.map",
+    "static/js/2.000c87aa.chunk.js": "/CalorieApp/static/js/2.000c87aa.chunk.js",
+    "static/js/2.000c87aa.chunk.js.map": "/CalorieApp/static/js/2.000c87aa.chunk.js.map",
+    "static/js/3.67e60d49.chunk.js": "/CalorieApp/static/js/3.67e60d49.chunk.js",
+    "static/js/3.67e60d49.chunk.js.map": "/CalorieApp/static/js/3.67e60d49.chunk.js.map",
+    "index.html": "/CalorieApp/index.html",
+    "static/css/main.b3033840.chunk.css.map": "/CalorieApp/static/css/main.b3033840.chunk.css.map",
+    "static/js/2.000c87aa.chunk.js.LICENSE.txt": "/CalorieApp/static/js/2.000c87aa.chunk.js.LICENSE.txt",
+    "static/media/foodComponents.scss": "/CalorieApp/static/media/image1.fbcc3605.jpg",
+    "static/media/result.scss": "/CalorieApp/static/media/image3.d726afdd.jpg",
+    "static/media/logo.6ce24c58.svg": "/CalorieApp/static/media/logo.6ce24c58.svg",
+    "static/media/women.391b8e5f.png": "/CalorieApp/static/media/women.391b8e5f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5d1f8bf.js",
+    "static/js/2.000c87aa.chunk.js",
+    "static/css/main.b3033840.chunk.css",
+    "static/js/main.ef8275e9.chunk.js"
+  ]
+}
