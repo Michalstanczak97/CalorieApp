@@ -77,11 +77,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### description
 
 ColorieApp is a health content app that allows you to read more about metabolism, count the calorie demand, add and edit your products to the table and see how data looks on the chart. There are two subpages containing information about metabolism, calculator, form, table data and chart. 
-List of technologies used in app:
-Sass Scss to styling components. The Fonts folder has included colors and fonts used in this project, so you can get inside and check what exactly the hex color and fonts family looks like.
-Router - to change a subpage to another by clicking the submit button.
-hook history - you can get access  to the history instance that you may use to navigate. For example: “Calculator component saves entered values by the user and send it to another component without losing data”
-React chart.js - chart.js was used to display all data. You can open the Chart component and see all the structures. 
+
+
+### List of technologies used in app:
+1. Sass Scss to styling components. The Fonts folder has included colors and fonts used in this project, so you can get inside and check what exactly the hex color and fonts family looks like.
+2. Router - to change a subpage to another by clicking the submit button.
+3. hook history - you can get access  to the history instance that you may use to navigate. For example: “Calculator component saves entered values by the user and send it to another component without losing data”
+4. React chart.js - chart.js was used to display all data. You can open the Chart component and see all the structures. 
 
 
 ### Plans for improvement app:
