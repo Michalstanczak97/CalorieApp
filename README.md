@@ -93,24 +93,26 @@ ColorieApp is a health content app that allows you to read more about metabolism
 
 
 ### components
-App - Component is the main component in React which acts as a container for all other components
-FirstPage- Secondary components contain all of the components included at the first page.
-ProductTable - this component allows us to get Api fetch. It returns responses with food nutritions data. Also there is all of the calculation counting with the right amount of nutritions value.
-FoodComponents - Included information for user about components of metabolism
-Header - first section with web name information
-Banner - First welcome container rendered by FirstPage component
-Calculator - there is a section with caloric demand calculation 
-Chapter - single fragment separating one component to another
-Metabolism - another section informs us what metabolism is.
-Mychart - component with chart data. There is a comparative data with daily demand calories and your consumed calories
-Product - This section allows us to change the grammage our daily calories.
-Result - component calculating how many calories containing carbs, protein and fats  
-Footer - footer
-Installation process
-npx create-react-app „nazwa apki”
-npm i --save lodash
-npm install react-router-dom
-npm install history
+1. App - Component is the main component in React which acts as a container for all other components
+2. FirstPage- Secondary components contain all of the components included at the first page.
+3. ProductTable - this component allows us to get Api fetch. It returns responses with food nutritions data. Also there is all of the calculation counting with the right amount of nutritions value.
+3. FoodComponents - Included information for user about components of metabolism
+4. Header - first section with web name information
+5. Banner - First welcome container rendered by FirstPage component
+6. Calculator - there is a section with caloric demand calculation 
+7. Chapter - single fragment separating one component to another
+8. Metabolism - another section informs us what metabolism is.
+9. Mychart - component with chart data. There is a comparative data with daily demand calories and your consumed calories
+10. Product - This section allows us to change the grammage our daily calories.
+11. Result - component calculating how many calories containing carbs, protein and fats  
+12. Footer - footer
+
+
+### Installation process
+ - npx create-react-app „nazwa apki”
+ - npm i --save lodash
+ - npm install react-router-dom
+ - npm install history
 
 ### Usage process 
 1. Read the information on the website
