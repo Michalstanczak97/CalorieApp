@@ -70,3 +70,58 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ### Official App documentation
+
+### Title: Apps for counting and comparing foods nutrition data.
+
+
+### description
+
+ColorieApp is a health content app that allows you to read more about metabolism, count the calorie demand, add and edit your products to the table and see how data looks on the chart. There are two subpages containing information about metabolism, calculator, form, table data and chart. 
+
+
+### List of technologies used in app:
+1. Sass Scss to styling components. The Fonts folder has included colors and fonts used in this project, so you can get inside and check what exactly the hex color and fonts family looks like.
+2. Router - to change a subpage to another by clicking the submit button.
+3. hook history - you can get access  to the history instance that you may use to navigate. For example: “Calculator component saves entered values by the user and send it to another component without losing data”
+4. React chart.js - chart.js was used to display all data. You can open the Chart component and see all the structures. 
+
+
+### Plans for improvement app:
+    - Instead of scss there is a plan for using a styled components and styleguidist.
+	    
+     
+
+
+### components
+1. App - Component is the main component in React which acts as a container for all other components
+2. FirstPage- Secondary components contain all of the components included at the first page.
+3. ProductTable - this component allows us to get Api fetch. It returns responses with food nutritions data. Also there is all of the calculation counting with the right amount of nutritions value.
+3. FoodComponents - Included information for user about components of metabolism
+4. Header - first section with web name information
+5. Banner - First welcome container rendered by FirstPage component
+6. Calculator - there is a section with caloric demand calculation 
+7. Chapter - single fragment separating one component to another
+8. Metabolism - another section informs us what metabolism is.
+9. Mychart - component with chart data. There is a comparative data with daily demand calories and your consumed calories
+10. Product - This section allows us to change the grammage our daily calories.
+11. Result - component calculating how many calories containing carbs, protein and fats  
+12. Footer - footer
+
+
+### Installation process
+ - npx create-react-app „nazwa apki”
+ - npm i --save lodash
+ - npm install react-router-dom
+ - npm install history
+
+### Usage process 
+1. Read the information on the website
+2. There is a calculator at the bottom of the page
+3. Fill in the form with your details
+4. After press button “sex” and check the data below
+5. Choose “oblicz” to count your demanded calories. You will be redirected to another
+    subpage.  
+6. Add in English food you ate. App render sum with all of the nutritions data. You
+    can change the grammage if you want. When you finish scroll down to
+    check the chart with the compared data.
+
