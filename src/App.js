@@ -3,7 +3,7 @@ import './App.css';
 import React, {useState} from "react";
 // import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {Switch, Route} from 'react-router-dom';
-import {HashRouter as Router} from "react-router-dom"
+import {Router} from "react-router-dom"
 import history from './components/history'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,8 +19,8 @@ function App() {
       <Router history={history}>
           <Header/>
           <Switch>
-              <Route exact path="/" render={() => <FirstPage getResult={setResult} finishResult={result} />} />
-              <Route exact path="/productTable" render ={()=> <ProductTable finishResult={result}/>}/>
+              <Route exact path="/CalorieApp" render={() => <FirstPage getResult={setResult} finishResult={result} />} />
+              <Route exact path="/CalorieApp/productTable" render ={()=> <ProductTable finishResult={result}/>}/>
           </Switch>
           <Footer/>
       </Router>

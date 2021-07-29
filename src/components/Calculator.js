@@ -73,9 +73,8 @@ const Calculator = ({getResult}) => {
 
     }
     const showProductTable = () => {
-            history.push("/productTable")
+            history.push("/CalorieApp/productTable")
     }
-    // toDO use History - zastosować hook
 
     const handleChange = (e) => {
         e.preventDefault();
